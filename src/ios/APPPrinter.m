@@ -216,26 +216,14 @@
 - (void) presentPrintController:(UIPrintInteractionController*)controller
                        fromRect:(CGRect)rect
 {
-    if(CDV_IsIPad()) {
-        [controller presentFromRect:rect inView:self.webView animated:YES completionHandler:
-         ^(UIPrintInteractionController *ctrl, BOOL ok, NSError *e) {
-             CDVPluginResult* pluginResult =
-             [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
+    [controller presentFromRect:rect inView:self.webView animated:YES completionHandler:
+     ^(UIPrintInteractionController *ctrl, BOOL ok, NSError *e) {
+         CDVPluginResult* pluginResult =
+         [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
 
-             [self.commandDelegate sendPluginResult:pluginResult
-                                         callbackId:_callbackId];
-         }];
-    }
-    else {
-        [controller presentAnimated:YES completionHandler:
-         ^(UIPrintInteractionController *ctrl, BOOL ok, NSError *e) {
-             CDVPluginResult* pluginResult =
-             [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
-
-             [self.commandDelegate sendPluginResult:pluginResult
-                                         callbackId:_callbackId];
-         }];
-    }
+         [self.commandDelegate sendPluginResult:pluginResult
+                                     callbackId:_callbackId];
+     }];
 }
 
 /**
@@ -306,18 +294,10 @@
 {
     UIPrinterPickerController* controller= [UIPrinterPickerController printerPickerControllerWithInitiallySelectedPrinter:nil];
     
-    if(CDV_IsIPad()) {
-        [controller presentFromRect:rect inView:self.webView animated:YES completionHandler:
-         ^(UIPrinterPickerController *ctrl, BOOL userDidSelect, NSError *e) {
-            [self returnPrinterPickerResult:ctrl withUserDidSelect:&userDidSelect];
-         }];
-    }
-    else {
-        [controller presentAnimated:YES completionHandler:
-         ^(UIPrinterPickerController *ctrl, BOOL userDidSelect, NSError *e) {
-             [self returnPrinterPickerResult:ctrl withUserDidSelect:&userDidSelect];
-         }];
-    }
+    [controller presentFromRect:rect inView:self.webView animated:YES completionHandler:
+     ^(UIPrinterPickerController *ctrl, BOOL userDidSelect, NSError *e) {
+        [self returnPrinterPickerResult:ctrl withUserDidSelect:&userDidSelect];
+     }];
 }
 
 /**
