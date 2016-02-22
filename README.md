@@ -1,14 +1,3 @@
-
-<p align="right">
-    <b><a href="#">master</a></b>
-    <span>&nbsp;</span>
-    <a href="https://github.com/katzer/cordova-plugin-printer/tree/google-cloud-print">v0.6</a>
-    <span>&nbsp;</span>
-    <a href="https://github.com/katzer/cordova-plugin-printer/tree/network-printer">v0.5</a>
-    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-    <i><a href="https://github.com/katzer/cordova-plugin-printer/tree/example">EXAMPLE :point_right:</a></i>
-</p>
-
 Cordova Print Plugin
 ====================
 
@@ -18,9 +7,8 @@ Cordova Print Plugin
 
 The plugin provides multiple branches to support different printer types and android versions while _AirPrint_ is supported with each one.
 
-- [master Branch][master_branch] for iOS and Android >= 4.4 (>= v0.7.x)
-- [google-cloud-print Branch][google-cloud-print_branch] for Android <= 4.3 (~> v0.6.x)
-- __Deprecated__ [network-printer Branch][network-printer_branch] for Android <= 4.3 (<= v0.5.x)
+- [master Branch][master_branch] for iOS and Android >= 4.4 (>= v0.7.x) and Cordova >= 4.0.0
+- [All Others] see original [repo][origin]
 
 ### About Apple AirPrint
 AirPrint is an Apple™ technology that helps you create full-quality printed output without the need to download or install drivers. AirPrint is built in to many printer models from most popular printer manufacturers. Just select an AirPrint printer on your local network to print from your favorite iOS or OS X app.<br>
@@ -63,7 +51,7 @@ The plugin can either be installed from git repository, from local file system t
 From master:
 ```bash
 # ~~ from master ~~
-cordova plugin add https://github.com/katzer/cordova-plugin-printer.git
+cordova plugin add https://github.com/memes/cordova-plugin-printer.git
 ```
 from a local folder:
 ```bash
@@ -95,6 +83,10 @@ cordova plugin rm de.appplant.cordova.plugin.printer
 
 
 ## ChangeLog
+#### Version 0.7.1-memes (Feb 22 2016)
+- [enhancement:] Justin Fisher: [Added support for Apple's UIPrinterPickerController][nkjf5]
+- [bugfix:] Disable check for iPad - CDV_IsIPad function removed from Cordova
+
 #### Version 0.7.1 (23.04.2015)
 - [bugfix:] `isAvailable` does not block the main thread anymore.
 - [bugfix:] iPad+iOS8 incompatibility (Thanks to __zmagyar__)
@@ -323,6 +315,7 @@ This software is released under the [Apache 2.0 License][apache2_license].
 [APF]: http://www.techotopia.com/index.php/Printing_with_the_Android_Printing_Framework
 [AirPrint]: http://support.apple.com/kb/ht4356
 [master_branch]: #
+[origin]: https://github.com/katzer/cordova-plugin-printer
 [google-cloud-print_branch]: https://github.com/katzer/cordova-plugin-printer/tree/google-cloud-print
 [network-printer_branch]: https://github.com/katzer/cordova-plugin-printer/tree/network-printer
 [ios_guide]: http://developer.apple.com/library/ios/documentation/2ddrawing/conceptual/drawingprintingios/Printing/Printing.html
@@ -336,3 +329,4 @@ This software is released under the [Apache 2.0 License][apache2_license].
 [apache2_license]: http://opensource.org/licenses/Apache-2.0
 [katzer]: katzer@appplant.de
 [appplant]: www.appplant.de
+[njkf5]: https://github.com/memes/cordova-plugin-printer/commit/8f7f521f0ff0b6991e5569426fb0740e3c588852

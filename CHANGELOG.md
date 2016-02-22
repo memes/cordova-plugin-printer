@@ -1,4 +1,8 @@
 ## ChangeLog
+#### Version 0.7.1-memes (Feb 22 2016)
+- [enhancement:] Justin Fisher: Added support for Apple's UIPrinterPickerController
+- [bugfix:] Disable check for iPad - CDV_IsIPad function removed from Cordova
+
 #### Version 0.7.1 (23.04.2015)
 - [bugfix:] `isAvailable` does not block the main thread anymore.
 - [bugfix:] iPad+iOS8 incompatibility (Thanks to __zmagyar__)
@@ -11,3 +15,4 @@
 - [enhancement:] New print options like `name`, `landscape` or `duplex`
 - [enhancement:] Ability to print remote content via URI
 - [enhancement:] Callback support
+

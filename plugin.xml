@@ -3,7 +3,7 @@
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
         id="de.appplant.cordova.plugin.printer"
-        version="0.7.1">
+        version="0.7.1-memes">
 
     <name>Printer</name>
 
@@ -13,7 +13,7 @@
     </description>
 
     <repo>
-        https://github.com/katzer/cordova-plugin-printer.git
+        https://github.com/memes/cordova-plugin-printer.git
     </repo>
 
     <keywords>
@@ -26,7 +26,7 @@
 
     <!-- cordova -->
     <engines>
-        <engine name="cordova" version=">=3.0.0" />
+        <engine name="cordova" version=">=4.0.0" />
     </engines>
 
     <!-- interface -->
